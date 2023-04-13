@@ -118,7 +118,7 @@
             if (input != null)
             {
                 Console.ForegroundColor = ConsoleColor.Green;
-                Console.WriteLine("Enter what french word must be changed:");
+                Console.WriteLine("Enter what French word must be changed:");
                 Console.ResetColor();
                 string? wordWhatChange = Console.ReadLine();
 
@@ -127,7 +127,7 @@
                 Console.ResetColor();
                 string? wordToChange = Console.ReadLine();
 
-                if (wordWhatChange != null && wordToChange != null)
+                if (wordWhatChange != null && wordToChange != null && Translations.ContainsKey(input))
                 {
                     Translations[input].Remove(wordWhatChange);
                     Translations[input].Add(wordToChange);

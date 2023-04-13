@@ -10,25 +10,8 @@ namespace DZ_CS_11
        
         static void Main(string[] args)
         {
-            Console.Write("Enter how much words you want add:\t");
-            int count = Convert.ToInt32(Console.ReadLine());
-            do
-            {
-                Dict.AddWord();
-                count--;
-            } while (count > 0);
-            Console.WriteLine();
-            Console.WriteLine();
-            Dict.ShowDict();
-            Dict.RemoveWordFromDict();
-            Dict.ShowDict();
-            Dict.RemoveWordFromTranslation();
-            Dict.ShowDict();
-            Dict.ChangeEngWord();
-            Dict.ShowDict();
-            Dict.ChangeFrenchWord();
-            Dict.ShowDict();
-            Dict.SearchTranslate();
+            //Ex1();
+            //Ex2();
 
 
         }
@@ -52,6 +35,28 @@ namespace DZ_CS_11
             Console.WriteLine();
             Console.WriteLine();
             personal.TakeInfoByLogin();
+        }
+        static void Ex2()
+        {
+            Console.Write("Enter how much words you want add:\t");
+            int count = Convert.ToInt32(Console.ReadLine());
+            do
+            {
+                Dict.AddWord();
+                count--;
+            } while (count > 0);
+            Console.WriteLine();
+            Console.WriteLine();
+            Dict.ShowDict();
+            Dict.RemoveWordFromDict();
+            Dict.ShowDict();
+            Dict.RemoveWordFromTranslation();
+            Dict.ShowDict();
+            Dict.ChangeEngWord();
+            Dict.ShowDict();
+            Dict.ChangeFrenchWord();
+            Dict.ShowDict();
+            Dict.SearchTranslate();
         }
     }
     
