@@ -12,6 +12,7 @@ namespace DZ_CS_11
         {
             //Ex1();
             //Ex2();
+            Ex3();
 
 
         }
@@ -57,6 +58,46 @@ namespace DZ_CS_11
             Dict.ChangeFrenchWord();
             Dict.ShowDict();
             Dict.SearchTranslate();
+        }
+        static void Ex3()
+        {
+            Queue queue = new Queue();
+            queue.tables.Add(new Table());
+            queue.tables.Add(new Table());
+            queue.tables.Add(new Table());
+
+            while (true)
+            {
+                Console.WriteLine("Menu:");
+                Console.WriteLine("1. Client arrival");
+                Console.WriteLine("2. Freeing the table");
+                Console.WriteLine("3. Table reservation");
+                Console.WriteLine("4. Exit");
+                Console.Write("Choose option: ");
+
+                int choose = Convert.ToInt32(Console.ReadLine());
+
+                switch (choose)
+                {
+                    case 1:
+                        queue.AddClient();
+                        break;
+                    case 2:
+                        queue.TableFree();
+                        break;
+                    case 3:
+                        queue.TableReservation();
+                        break;
+                    case 4:
+                        Console.WriteLine("Goodbye!");
+                        return;
+                    default:
+                        Console.WriteLine("Incorrect option, try again!!!");
+                        break;
+                }
+
+                Console.WriteLine();
+            }
         }
     }
     
